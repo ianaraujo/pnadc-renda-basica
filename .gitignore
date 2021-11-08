@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-*.Rproj
-.Rproj.user
+*Rproj.user
 
 *.csv
-=======
-.Rproj.user
-.Rhistory
-.RData
-.Ruserdata
->>>>>>> be72734ddb0acffaaf8b20ca4eadef81d65800d0
