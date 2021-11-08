@@ -13,6 +13,8 @@ library(srvyr)
 pnadc <- get_pnadc(year = 2021, quarter = 2, 
                    interview = NULL, vars = NULL, labels = F, design = F)
 
+pnadc$n <- 1
+
 pnadc_plano_amostral <- survey::svydesign(ids = ~ UPA, strata = ~ Estrato, 
                                           weights = ~ V1027, data = pnadc, nest = TRUE)
 
@@ -69,6 +71,13 @@ pnadc_rio <- pnadc %>%
 # Simulações ----
 
 source(file = "simulador.R")
+
+## Valores
+
+# bolsa_familia, salario_minimo, salario_minimo2, 
+# auxilio_emergencial, auxilio_brasil, mumbuca
+
+valores <- list()
 
 simulador(file = "pnadc2021.csv", valor = 400)
 
